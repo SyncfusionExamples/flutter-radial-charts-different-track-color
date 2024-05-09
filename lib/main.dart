@@ -55,9 +55,8 @@ class _CustomRadialBarSeriesRenderer
 
   @override
   void customizeSegment(ChartSegment segment) {
+    super.customizeSegment(segment);
     final RadialBarSegment radialBarSegment = segment as RadialBarSegment;
-    super.updateSegmentColor(segment, borderColor, borderWidth);
-
     segment.trackFillPaint.color =
         chartData[radialBarSegment.currentSegmentIndex]
             .trackColor!
